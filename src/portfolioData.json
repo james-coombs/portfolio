@@ -53,7 +53,7 @@
       "technologies": ["JQuery", "AJAX"],
       "overviewText": "Play a game of Tic-Tac-Toe, save your progress, and view your game statistics! A custom front end game client built in JavaScript, with JQuery and Ajax.",
       "descriptionText": "My first web app! Built in only a week, and with no prior development experience. It is not pretty, but it absolutely does what it advertises! The first time I was able to make a successful request to the API and render the response data was one of the biggest victories in my development career.",
-      "url": "https://james-coombs.github.io/project-1-tic-tac-toe",
+      "url": "https://james-coombs.github.io/tic-tac-toe",
       "repo": "https://github.com/james-coombs/project-1-tic-tac-toe",
       "screenshotUrls": [""]
     }
