@@ -16,16 +16,16 @@ export default function Project(props) {
     biologicalsamplescsvapi1,
     sweatersforturtles,
     tictactoe,
-    yamba
+    yamba,
   ];
   console.log(props.project["name"].toLowerCase().replace(/\W/g, ""));
 
   return (
-    <div className="container mb-3 project-card">
+    <div className="mb-3 project-card">
       <Row>
         <Col sm={5}>
           <h3>{props.project["name"]}</h3>
-          {props.project.technologies.map(t => (
+          {props.project.technologies.map((t) => (
             <span key={t}>{t}</span>
           ))}
           <p>{props.project["overviewText"]}</p>
