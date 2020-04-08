@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Footer(props) {
   return (
-    <div>
+    <div className="text-center">
       <div>
         {Object.keys(portfolioData.about.contact).map((key, i) => (
           <a
@@ -15,6 +15,23 @@ export default function Footer(props) {
           </a>
         ))}
       </div>
+      <p>
+        <a
+          href="https://iconscout.com/icons/sitecore"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Sitecore Icon
+        </a>
+        {" by "}
+        <a
+          href="https://iconscout.com/contributors/icons8"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Icons8
+        </a>
+      </p>
     </div>
   );
 }
