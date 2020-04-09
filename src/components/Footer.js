@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Footer(props) {
   return (
-    <div className="text-center">
+    <div className="text-center mt-3">
       <div>
         {Object.keys(portfolioData.about.contact).map((key, i) => (
           <a

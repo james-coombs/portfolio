@@ -13,16 +13,18 @@ export default function Header(props) {
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        minHeight: "55vh"
+        minHeight: "55vh",
       }}
     >
-      <Image className="headshot mt-3" src={headshot} roundedCircle />
+      <Image className="headshot my-3" src={headshot} roundedCircle />
       <div className="">{portfolioData.about.name}</div>
       <div className="">{portfolioData.about.title}</div>
       <hr className="header-hr" />
-      <div className="">{portfolioData.about.descriptionTextPrimary}</div>
-      <div className="">{portfolioData.about.descriptionTextSecondary}</div>
-      <div>
+      <div className="about">{portfolioData.about.descriptionTextPrimary}</div>
+      <div className="about">
+        {portfolioData.about.descriptionTextSecondary}
+      </div>
+      <div className="mt-5">
         {Object.keys(portfolioData.about.contact).map((key, i) => (
           <a
             key={i}

@@ -21,10 +21,10 @@ export default {
     descriptionTextSecondary:
       "Development is the intersection of my two passions: building things and exploring technology - Putting these pieces together is what I love.",
     contact: {
-      linkedinUrl: "https://linkedin.com/in/james-coombs",
-      emailAddress: "coombsj36@gmail.com",
-      githubUrl: "https://github.com/james-coombs",
-      resumeUrl:
+      Linkedin: "https://linkedin.com/in/james-coombs",
+      Email: "coombsj36@gmail.com",
+      Github: "https://github.com/james-coombs",
+      Resume:
         "https://drive.google.com/open?id=17S8Xg_MaAn5AfOl3PTXKEo22Rx-VPjYk",
     },
   },
