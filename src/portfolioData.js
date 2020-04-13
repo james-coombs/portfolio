@@ -6,10 +6,10 @@ import { ReactComponent as SitecoreSvg } from "./img/svg/sitecore.svg";
 
 export default {
   navItems: {
-    about: "/#about",
-    projects: "/#projects",
-    skills: "/#skills",
-    contact: "/#contact",
+    About: "/#about",
+    Projects: "/#projects",
+    Skills: "/#skills",
+    Contact: "/#contact",
   },
 
   about: {

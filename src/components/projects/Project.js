@@ -10,6 +10,20 @@ import tictactoe from "../../img/screenshots/tictactoe.png";
 import yamba from "../../img/screenshots/yamba.png";
 
 export default function Project(props) {
+  const toggleFrame = (id) => {
+    const iFrame = document.createElement("iframe");
+
+    iFrame.setAttribute("title", props.project["name"]);
+    iFrame.setAttribute("src", props.project["url"]);
+    iFrame.setAttribute("allowFullScreen", "no");
+    iFrame.setAttribute("frameBorder", "0");
+
+    const childEl = document.getElementById(id).firstChild;
+    childEl === null
+      ? document.getElementById(id).appendChild(iFrame)
+      : childEl.remove();
+  };
+
   const list = [
     backlog,
     biologicalsamplescsvapi0,
@@ -18,7 +32,6 @@ export default function Project(props) {
     tictactoe,
     yamba,
   ];
-  console.log(props.project["name"].toLowerCase().replace(/\W/g, ""));
 
   return (
     <div className="mb-3 project-card">
@@ -41,17 +54,11 @@ export default function Project(props) {
 
         <Col sm={7}>
           {list.map((e, i) => {
-            if (
-              e
-                .toString()
-                .includes(
-                  props.project["name"].toLowerCase().replace(/\W/g, "")
-                )
-            ) {
-              if (
-                props.project["name"].toLowerCase().replace(/\W/g, "") ===
-                "biologicalsamplescsvapi"
-              ) {
+            const projectName = props.project["name"]
+              .toLowerCase()
+              .replace(/\W/g, "");
+            if (e.toString().includes(projectName)) {
+              if (projectName === "biologicalsamplescsvapi") {
                 return (
                   <>
                     <p key={i}>
@@ -69,26 +76,21 @@ export default function Project(props) {
                 );
               }
               return (
-                <img
-                  key={i}
-                  src={e}
-                  className="img-fluid mb-1"
-                  alt={props.project["name"]}
-                />
+                <>
+                  <img
+                    key={i}
+                    src={e}
+                    className="img-fluid mb-1"
+                    alt={props.project["name"]}
+                  />
+                  <Button onClick={() => toggleFrame(props.project["name"])}>
+                    Toggle Iframe
+                  </Button>
+                  <div id={props.project["name"]}></div>{" "}
+                </>
               );
             }
           })}
-
-          {/* <iframe
-            title={props.project["name"]}
-            src={props.project["url"]}
-            style={{
-              height: "25rem",
-              width: "34rem"
-            }}
-            allowfullscreen="no"
-            frameborder="0"
-          ></iframe> */}
         </Col>
       </Row>
     </div>

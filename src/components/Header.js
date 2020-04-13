@@ -13,7 +13,7 @@ export default function Header(props) {
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        minHeight: "55vh",
+        minHeight: "60vh",
       }}
     >
       <Image className="headshot my-3" src={headshot} roundedCircle />
@@ -24,7 +24,7 @@ export default function Header(props) {
       <div className="about">
         {portfolioData.about.descriptionTextSecondary}
       </div>
-      <div className="mt-5">
+      <div className="py-5">
         {Object.keys(portfolioData.about.contact).map((key, i) => (
           <a
             key={i}
