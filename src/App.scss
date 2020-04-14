@@ -17,11 +17,24 @@ code {
   margin-right: auto;
 } */
 
+#root {
+  background: #f8f8ff;
+}
+
 .headshot {
   width: 15vw;
 }
 
-.navbar {
+.navbar.main-nav {
+  position: sticky;
+  top: 0vh;
+  z-index: 10;
+  background: hotpink;
+  border-bottom: 1px solid black;
+
+  .nav-item {
+    margin: 0px 1rem;
+  }
 }
 
 .portfolio-hr {
@@ -50,6 +63,14 @@ svg {
 .about {
   margin: 0 20vw;
 }
+
+// .contact-link {
+//   span {
+//     svg {
+//       max-width: 3rem;
+//     }
+//   }
+// }
 
 .header-hr {
   margin: 10px 10vw;

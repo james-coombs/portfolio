@@ -2,6 +2,9 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Overlay from "react-bootstrap/Overlay";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
 import backlog from "../../img/screenshots/backlog.png";
 import biologicalsamplescsvapi0 from "../../img/screenshots/biologicalsamplescsvapi0.png";
 import biologicalsamplescsvapi1 from "../../img/screenshots/biologicalsamplescsvapi1.png";
@@ -10,7 +13,7 @@ import tictactoe from "../../img/screenshots/tictactoe.png";
 import yamba from "../../img/screenshots/yamba.png";
 
 export default function Project(props) {
-  const toggleFrame = (id) => {
+  const toggleFrame = (id, e) => {
     const iFrame = document.createElement("iframe");
 
     iFrame.setAttribute("title", props.project["name"]);
@@ -45,10 +48,10 @@ export default function Project(props) {
           <hr className="portfolio-hr" />
           <p>{props.project["descriptionText"]}</p>
           <Button className="mr-1" href={props.project["url"]}>
-            url
+            Go to site
           </Button>
           <Button className="mr-1" href={props.project["repo"]}>
-            repo
+            GitHub Repo
           </Button>
         </Col>
 
@@ -77,15 +80,21 @@ export default function Project(props) {
               }
               return (
                 <>
-                  <img
-                    key={i}
-                    src={e}
-                    className="img-fluid mb-1"
-                    alt={props.project["name"]}
-                  />
-                  <Button onClick={() => toggleFrame(props.project["name"])}>
-                    Toggle Iframe
-                  </Button>
+                  <OverlayTrigger
+                    overlay={
+                      <Tooltip id="tooltip-disabled">
+                        Click to toggle project embed!
+                      </Tooltip>
+                    }
+                  >
+                    <img
+                      key={i}
+                      src={e}
+                      className="img-fluid mb-1"
+                      alt={props.project["name"]}
+                      onClick={(e) => toggleFrame(props.project["name"], e)}
+                    />
+                  </OverlayTrigger>
                   <div id={props.project["name"]}></div>{" "}
                 </>
               );

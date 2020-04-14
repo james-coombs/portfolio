@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 
 export default function Skills(props) {
   return (
-    <>
+    <div id="skills">
       <h4 className="text-center mb-2">Skills</h4>
       <Row className="skills-row">
         {portfolioData.skills.map((skill) => (
@@ -25,6 +25,6 @@ export default function Skills(props) {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   );
 }

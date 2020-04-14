@@ -3,6 +3,10 @@ import { ReactComponent as EmberSvg } from "./img/svg/ember.svg";
 import { ReactComponent as SolrSvg } from "./img/svg/solr.svg";
 import { ReactComponent as SqlServerSvg } from "./img/svg/sqlserver.svg";
 import { ReactComponent as SitecoreSvg } from "./img/svg/sitecore.svg";
+import { ReactComponent as emailSvg } from "./img/svg/email.svg";
+import { ReactComponent as githubSvg } from "./img/svg/github.svg";
+import { ReactComponent as linkedinSvg } from "./img/svg/linkedin.svg";
+import { ReactComponent as pdfSvg } from "./img/svg/pdf.svg";
 
 export default {
   navItems: {
@@ -20,13 +24,25 @@ export default {
       "A passionate developer constantly looking to build, test and learn in a full-stack environment. Eager to join a team of like-minded innovators dedicated to creating solutions to highly complex problems.",
     descriptionTextSecondary:
       "Development is the intersection of my two passions: building things and exploring technology - Putting these pieces together is what I love.",
-    contact: {
-      Linkedin: "https://linkedin.com/in/james-coombs",
-      Email: "coombsj36@gmail.com",
-      Github: "https://github.com/james-coombs",
-      Resume:
-        "https://drive.google.com/open?id=17S8Xg_MaAn5AfOl3PTXKEo22Rx-VPjYk",
-    },
+    contact: [
+      {
+        name: "Linkedin",
+        url: "https://linkedin.com/in/james-coombs",
+        svg: linkedinSvg,
+      },
+      { name: "Email", url: "coombsj36@gmail.com", svg: emailSvg },
+      {
+        name: "Github",
+        url: "https://github.com/james-coombs",
+        svg: githubSvg,
+      },
+      {
+        name: "Resume",
+        url:
+          "https://drive.google.com/open?id=17S8Xg_MaAn5AfOl3PTXKEo22Rx-VPjYk",
+        svg: pdfSvg,
+      },
+    ],
   },
 
   projects: [

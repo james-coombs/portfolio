@@ -1,19 +1,12 @@
 import portfolioData from "../portfolioData";
 import React from "react";
+import Contact from "./Contact";
 
 export default function Footer(props) {
   return (
-    <div className="text-center mt-3">
+    <div id="contact" className="text-center mt-3">
       <div>
-        {Object.keys(portfolioData.about.contact).map((key, i) => (
-          <a
-            key={i}
-            className="col-sm-3"
-            href={portfolioData.about.contact[key]}
-          >
-            {key}
-          </a>
-        ))}
+        <Contact />
       </div>
       <p>
         <a
