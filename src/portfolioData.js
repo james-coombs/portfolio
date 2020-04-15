@@ -8,12 +8,15 @@ import { ReactComponent as githubSvg } from "./img/svg/github.svg";
 import { ReactComponent as linkedinSvg } from "./img/svg/linkedin.svg";
 import { ReactComponent as pdfSvg } from "./img/svg/pdf.svg";
 
-import backlog from "./img/screenshots/backlog.png";
-import biologicalsamplescsvapi0 from "./img/screenshots/biologicalsamplescsvapi0.png";
-import biologicalsamplescsvapi1 from "./img/screenshots/biologicalsamplescsvapi1.png";
-import sweatersforturtles from "./img/screenshots/sweatersforturtles.png";
-import tictactoe from "./img/screenshots/tictactoe.png";
-import yamba from "./img/screenshots/yamba.png";
+import backlog from "./img/screenshots/back-log.png";
+import api from "./img/screenshots/api.png";
+import sftCart from "./img/screenshots/sft-cart.png";
+import sftProduct from "./img/screenshots/sft-product.png";
+import ttt from "./img/screenshots/ttt.png";
+import yambaBoard from "./img/screenshots/yamba-board.png";
+import yambaBoards from "./img/screenshots/yamba-boards.png";
+import yambaHome from "./img/screenshots/yamba-home.png";
+import yambaUsers from "./img/screenshots/yamba-users.png";
 
 export default {
   navItems: {
@@ -62,7 +65,7 @@ export default {
         "This app was my first experience with Ember.js. I spent a lot of time playing around with routes, views, and components. My development process was focused on trying to get a certain piece of information to render, or sending a specific action to the API.",
       url: "https://james-coombs.github.io/yamba-client",
       repo: "https://github.com/james-coombs/yamba-client",
-      screenshot: yamba,
+      screenshots: [yambaHome, yambaBoards, yambaBoard, yambaUsers],
     },
     {
       name: "Sweaters for Turtles",
@@ -73,7 +76,7 @@ export default {
         "This was my first exposure to Express.js, and I found it a very powerful and versatile tool for creating an API. It was also my first interaction with a third party API (Stripe), and MongoDB.",
       url: "https://chardeemcdennis.github.io/sweaters-for-turtles-client",
       repo: "https://github.com/chardeemcdennis/sweaters-for-turtles-client",
-      screenshot: sweatersforturtles,
+      screenshots: [sftProduct, sftCart],
     },
     {
       name: "Back\\Log",
@@ -84,7 +87,7 @@ export default {
         "Back\\Log is my very first pet project! It is the first full stack app that I built, and it is what made me fall in love with Ruby on Rails. I was amazed at the flexibility that it gives you, while remaining easy to use (not to mention giving the best error messages around). ",
       url: "https://james-coombs.github.io/back-log-client",
       repo: "https://github.com/james-coombs/back-log-client",
-      screenshot: backlog,
+      screenshots: [backlog],
     },
     {
       name: "Tic-Tac-Toe",
@@ -95,7 +98,7 @@ export default {
         "My first web app! Built in only a week, and with no prior development experience. It is not pretty, but it absolutely does what it advertises! The first time I was able to make a successful request to the API and render the response data was one of the biggest victories in my development career.",
       url: "https://james-coombs.github.io/tic-tac-toe",
       repo: "https://github.com/james-coombs/project-1-tic-tac-toe",
-      screenshot: tictactoe,
+      screenshots: [ttt],
     },
     {
       name: "Biological Samples CSV API",
@@ -106,7 +109,7 @@ export default {
         "This app is used to convert CSV files to JSON. It is my first app to use Rails views (.erb templates) rather than a separate JavaScript Client.",
       url: "https://samples-csv-api.herokuapp.com/samples",
       repo: "https://github.com/james-coombs/rails-csv-api",
-      screenshot: [biologicalsamplescsvapi0, biologicalsamplescsvapi1],
+      screenshots: [api],
     },
   ],
 
