@@ -5,12 +5,6 @@ import Col from "react-bootstrap/Col";
 import Overlay from "react-bootstrap/Overlay";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import backlog from "../../img/screenshots/backlog.png";
-import biologicalsamplescsvapi0 from "../../img/screenshots/biologicalsamplescsvapi0.png";
-import biologicalsamplescsvapi1 from "../../img/screenshots/biologicalsamplescsvapi1.png";
-import sweatersforturtles from "../../img/screenshots/sweatersforturtles.png";
-import tictactoe from "../../img/screenshots/tictactoe.png";
-import yamba from "../../img/screenshots/yamba.png";
 
 export default function Project(props) {
   const toggleFrame = (id, e) => {
@@ -26,15 +20,6 @@ export default function Project(props) {
       ? document.getElementById(id).appendChild(iFrame)
       : childEl.remove();
   };
-
-  const list = [
-    backlog,
-    biologicalsamplescsvapi0,
-    biologicalsamplescsvapi1,
-    sweatersforturtles,
-    tictactoe,
-    yamba,
-  ];
 
   return (
     <div className="mb-3 project-card">
@@ -56,50 +41,35 @@ export default function Project(props) {
         </Col>
 
         <Col sm={7}>
-          {list.map((e, i) => {
-            const projectName = props.project["name"]
-              .toLowerCase()
-              .replace(/\W/g, "");
-            if (e.toString().includes(projectName)) {
-              if (projectName === "biologicalsamplescsvapi") {
-                return (
-                  <>
-                    <p key={i}>
-                      {e.toString().includes("biologicalsamplescsvapi0")
-                        ? "User Interface"
-                        : "JSON Data"}
-                    </p>
-                    <img
-                      key={i}
-                      src={e}
-                      className="img-fluid mb-1"
-                      alt={props.project["name"]}
-                    />
-                  </>
-                );
-              }
-              return (
-                <>
-                  <OverlayTrigger
-                    overlay={
-                      <Tooltip id="tooltip-disabled">
-                        Click to toggle project embed!
-                      </Tooltip>
-                    }
-                  >
-                    <img
-                      key={i}
-                      src={e}
-                      className="img-fluid mb-1"
-                      alt={props.project["name"]}
-                      onClick={(e) => toggleFrame(props.project["name"], e)}
-                    />
-                  </OverlayTrigger>
-                  <div id={props.project["name"]}></div>{" "}
-                </>
-              );
-            }
-          })}
+          {Array.isArray(props.project["screenshot"]) ? (
+            props.project["screenshot"].map((s, i) => (
+              <img
+                key={i}
+                src={s}
+                className="img-fluid mb-1"
+                alt={props.project["name"]}
+              />
+            ))
+          ) : (
+            <>
+              <OverlayTrigger
+                overlay={
+                  <Tooltip id="tooltip-disabled">
+                    Click to toggle project embed!
+                  </Tooltip>
+                }
+              >
+                <img
+                  key={props.project["name"]}
+                  src={props.project["screenshot"]}
+                  className="img-fluid mb-1"
+                  alt={props.project["name"]}
+                  onClick={(e) => toggleFrame(props.project["name"], e)}
+                />
+              </OverlayTrigger>
+              <div id={props.project["name"]}></div>{" "}
+            </>
+          )}
         </Col>
       </Row>
     </div>

@@ -12,7 +12,7 @@ export default function NavDropdownExample() {
     <Router>
       <Nav
         variant=""
-        className="container justify-content-center navbar main-nav"
+        className="justify-content-center navbar main-nav"
         activeKey="1"
         // onSelect={handleSelect}
       >

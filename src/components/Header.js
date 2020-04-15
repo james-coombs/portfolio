@@ -10,13 +10,13 @@ export default function Header(props) {
     <div
       id="about"
       className="text-center header-backsplash"
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        minHeight: "60vh",
-      }}
+      // style={{
+      //   backgroundImage: `url(${background})`,
+      //   backgroundPosition: "center",
+      //   backgroundSize: "cover",
+      //   backgroundRepeat: "no-repeat",
+      //   minHeight: "60vh",
+      // }}
     >
       <Image className="headshot my-3" src={headshot} roundedCircle />
       <div className="">{portfolioData.about.name}</div>
