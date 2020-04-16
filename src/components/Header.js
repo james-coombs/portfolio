@@ -41,7 +41,7 @@ export default function Header(props) {
       </Row>
 
       <div className="text-center py-4">
-        {props.isExpanded ? null : <Contact />}
+        {props.isExpanded ? <Contact /> : null}
       </div>
     </div>
   );

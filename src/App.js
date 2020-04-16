@@ -45,7 +45,7 @@ function App() {
       </div>
       <div className="text-center">
         <Button
-          className="my-5"
+          className="mt-5"
           onClick={() => setExpanded(!isExpanded)}
           aria-controls="Collapse-collapse-text"
           aria-expanded={isExpanded}
@@ -53,7 +53,7 @@ function App() {
           {isExpanded ? "Hide" : "Expand"}
         </Button>
       </div>
-      {isExpanded ? <Footer /> : null}
+      <Footer isExpanded={isExpanded} />
     </Container>
   );
 }
