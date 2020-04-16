@@ -5,20 +5,36 @@ import Col from "react-bootstrap/Col";
 import Overlay from "react-bootstrap/Overlay";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
 
 export default function Project(props) {
   const toggleFrame = (id, e) => {
     const iFrame = document.createElement("iframe");
 
+    iFrame.setAttribute("id", `iframe-${props.project["name"]}`);
     iFrame.setAttribute("title", props.project["name"]);
     iFrame.setAttribute("src", props.project["url"]);
     iFrame.setAttribute("allowFullScreen", "no");
     iFrame.setAttribute("frameBorder", "0");
 
     const childEl = document.getElementById(id).firstChild;
-    childEl === null
-      ? document.getElementById(id).appendChild(iFrame)
-      : childEl.remove();
+
+    if (!childEl.classList.contains("d-none")) {
+      childEl.classList.add("d-none");
+
+      document.getElementById(`iframe-${props.project["name"]}`)
+        ? document
+            .getElementById(`iframe-${props.project["name"]}`)
+            .classList.remove("d-none")
+        : document.getElementById(id).appendChild(iFrame);
+    } else {
+      childEl.classList.remove("d-none");
+
+      document
+        .getElementById(`iframe-${props.project["name"]}`)
+        .classList.add("d-none");
+    }
   };
 
   return (
@@ -38,38 +54,32 @@ export default function Project(props) {
           <Button className="mr-1" href={props.project["repo"]}>
             GitHub Repo
           </Button>
+          <Button
+            onClick={(e) => toggleFrame(props.project["name"], e)}
+            className="mr-1"
+          >
+            Toggle Embed
+          </Button>
         </Col>
 
         <Col sm={7}>
-          {Array.isArray(props.project["screenshot"]) ? (
-            props.project["screenshot"].map((s, i) => (
-              <img
-                key={i}
-                src={s}
-                className="img-fluid mb-1"
-                alt={props.project["name"]}
-              />
-            ))
-          ) : (
-            <>
-              <OverlayTrigger
-                overlay={
-                  <Tooltip id="tooltip-disabled">
-                    Click to toggle project embed!
-                  </Tooltip>
-                }
-              >
-                <img
-                  key={props.project["name"]}
-                  src={props.project["screenshot"]}
-                  className="img-fluid mb-1"
-                  alt={props.project["name"]}
-                  onClick={(e) => toggleFrame(props.project["name"], e)}
-                />
-              </OverlayTrigger>
-              <div id={props.project["name"]}></div>{" "}
-            </>
-          )}
+          <div id={props.project["name"]}>
+            <div className="images">
+              <Tabs defaultActiveKey="0" id="">
+                {props.project.screenshots.map((s, i) => (
+                  <Tab eventKey={i} title={i}>
+                    <img
+                      key={props.project["name"]}
+                      src={s}
+                      className="img-fluid mb-1"
+                      alt={props.project["name"]}
+                    />
+                    {/* <div id={props.project["name"]}></div>{" "} */}
+                  </Tab>
+                ))}
+              </Tabs>
+            </div>
+          </div>
         </Col>
       </Row>
     </div>

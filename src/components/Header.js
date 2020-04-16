@@ -26,7 +26,7 @@ export default function Header(props) {
           <Image className="headshot mt-5 mb-2" src={headshot} roundedCircle />
         </Col>
         <Col md={9} className="about-text">
-          <div className="text-center">
+          <div className="">
             <span className="h2">{portfolioData.about.name}</span>
             <span className="h2">{" | "}</span>
             <span className="h3">{portfolioData.about.title}</span>

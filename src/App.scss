@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 $offwhite: #f8f8ff;
 $copper: #fb9127;
 $chocolate: #2a2110;
@@ -87,20 +89,6 @@ code {
   }
 }
 
-// .carousel,
-// .carousel-inner {
-//   max-height: 200px;
-// }
-
-#contact {
-  background: $black;
-  padding: 30px 0px;
-
-  a {
-    color: $offwhite;
-  }
-}
-
 .about {
   color: $offwhite;
 }
@@ -137,6 +125,20 @@ code {
   color: $chocolate;
 }
 
+.main-collapse {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .project-card {
   border: 1px solid;
   background: #fff;
@@ -160,6 +162,21 @@ svg {
   margin: 0 20vw;
 }
 
+#contact {
+  background: rgb(21, 20, 19);
+  background: linear-gradient(
+    180deg,
+    rgba(42, 33, 16, 0.8295693277310925) 14%,
+    rgba(21, 20, 19, 1) 80%
+  );
+
+  padding: 30px 0px;
+
+  a {
+    color: $offwhite;
+  }
+}
+
 .contact-link {
   span {
     svg {
@@ -170,5 +187,5 @@ svg {
 
 .header-hr {
   background: $offwhite;
-  margin: 10px 10vw;
+  margin: 10px 0px;
 }
