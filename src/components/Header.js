@@ -4,12 +4,14 @@ import headshot from "../img/headshot.jpg";
 import background from "../img/background.jpg";
 import Image from "react-bootstrap/Image";
 import Contact from "./Contact";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export default function Header(props) {
   return (
     <div
       id="about"
-      className="text-center header-backsplash"
+      className="header-backsplash"
       // style={{
       //   backgroundImage: `url(${background})`,
       //   backgroundPosition: "center",
@@ -18,16 +20,24 @@ export default function Header(props) {
       //   minHeight: "60vh",
       // }}
     >
-      <Image className="headshot my-3" src={headshot} roundedCircle />
-      <div className="">{portfolioData.about.name}</div>
-      <div className="">{portfolioData.about.title}</div>
-      <hr className="header-hr" />
-      <div className="about">{portfolioData.about.descriptionTextPrimary}</div>
-      <div className="about">
-        {portfolioData.about.descriptionTextSecondary}
-      </div>
-      <div className="py-5">
-        <Contact />
+      <Row className="header-row">
+        <Col md={3} className="text-center">
+          {" "}
+          <Image className="headshot mt-5 mb-2" src={headshot} roundedCircle />
+          <div className="">{portfolioData.about.name}</div>
+          <div className="">{portfolioData.about.title}</div>
+        </Col>
+        <Col md={9}>
+          <div className="about-text">
+            {portfolioData.about.descriptionTextPrimary}
+            <hr className="header-hr" />
+            {portfolioData.about.descriptionTextSecondary}
+          </div>
+        </Col>
+      </Row>
+
+      <div className="text-center py-4">
+        {props.isExpanded ? null : <Contact />}
       </div>
     </div>
   );

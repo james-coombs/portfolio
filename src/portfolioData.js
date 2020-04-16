@@ -10,8 +10,9 @@ import { ReactComponent as pdfSvg } from "./img/svg/pdf.svg";
 
 import backlog from "./img/screenshots/back-log.png";
 import api from "./img/screenshots/api.png";
+import sftHome from "./img/screenshots/sft-home.png";
 import sftCart from "./img/screenshots/sft-cart.png";
-import sftProduct from "./img/screenshots/sft-product.png";
+import sftProducts from "./img/screenshots/sft-products.png";
 import ttt from "./img/screenshots/ttt.png";
 import yambaBoard from "./img/screenshots/yamba-board.png";
 import yambaBoards from "./img/screenshots/yamba-boards.png";
@@ -76,7 +77,7 @@ export default {
         "This was my first exposure to Express.js, and I found it a very powerful and versatile tool for creating an API. It was also my first interaction with a third party API (Stripe), and MongoDB.",
       url: "https://chardeemcdennis.github.io/sweaters-for-turtles-client",
       repo: "https://github.com/chardeemcdennis/sweaters-for-turtles-client",
-      screenshots: [sftProduct, sftCart],
+      screenshots: [sftHome, sftProducts, sftCart],
     },
     {
       name: "Back\\Log",

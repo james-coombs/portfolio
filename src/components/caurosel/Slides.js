@@ -9,19 +9,17 @@ export default function Slides() {
     setIndex(selectedIndex);
   };
 
-  const test = () => {
-    portfolioData.projects.map((p, i) => console.log(p, i));
-  };
-
   return (
     <div>
       <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
         {portfolioData.projects.map((p, i) => (
           <Carousel.Item className="text-center">
-            <img src={p.screenshot} className="img-fluid mb-1" alt={p.name} />
-            <Carousel.Caption>
-              <h3>{p.name}</h3>
-            </Carousel.Caption>
+            <h3>{p.name}</h3>
+            <img
+              src={p.screenshots[0]}
+              className="img-fluid mb-1"
+              alt={p.name}
+            />
           </Carousel.Item>
         ))}
       </Carousel>

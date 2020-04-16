@@ -72,10 +72,15 @@ code {
 }
 
 #root {
+  .carousel {
+    margin: 0 auto;
+    max-width: 45vw;
+  }
   .carousel-caption {
     color: $black;
   }
   .carousel-indicators {
+    top: 100%;
     li {
       background-color: $black;
     }
@@ -102,6 +107,16 @@ code {
 
 .headshot {
   width: 15vw;
+}
+
+#about {
+  .header-row {
+    margin: 0px 15vw;
+  }
+
+  .about-text {
+    margin-top: 10%;
+  }
 }
 
 .navbar.main-nav {
@@ -154,5 +169,6 @@ svg {
 }
 
 .header-hr {
+  background: $offwhite;
   margin: 10px 10vw;
 }
