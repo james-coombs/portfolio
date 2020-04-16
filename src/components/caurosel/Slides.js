@@ -11,7 +11,12 @@ export default function Slides() {
 
   return (
     <div>
-      <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
+      <Carousel
+        // interval={null}
+        activeIndex={index}
+        onSelect={handleSelect}
+        controls={false}
+      >
         {portfolioData.projects.map((p, i) => (
           <Carousel.Item className="text-center">
             <h3>{p.name}</h3>

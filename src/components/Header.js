@@ -24,13 +24,17 @@ export default function Header(props) {
         <Col md={3} className="text-center">
           {" "}
           <Image className="headshot mt-5 mb-2" src={headshot} roundedCircle />
-          <div className="">{portfolioData.about.name}</div>
-          <div className="">{portfolioData.about.title}</div>
         </Col>
-        <Col md={9}>
-          <div className="about-text">
+        <Col md={9} className="about-text">
+          <div className="text-center">
+            <span className="h2">{portfolioData.about.name}</span>
+            <span className="h2">{" | "}</span>
+            <span className="h3">{portfolioData.about.title}</span>
+          </div>
+
+          <hr className="header-hr" />
+          <div>
             {portfolioData.about.descriptionTextPrimary}
-            <hr className="header-hr" />
             {portfolioData.about.descriptionTextSecondary}
           </div>
         </Col>
