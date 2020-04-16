@@ -28,7 +28,6 @@ function App() {
         <Header isExpanded={isExpanded} />
         {isExpanded ? null : (
           /* <div onClick={(e) => console.log(e, e.target)}> link to specific project */
-
           <Slides />
         )}
         <Collapse
@@ -45,12 +44,14 @@ function App() {
       </div>
       <div className="text-center">
         <Button
+          style={{ border: "1px solid #e2e6ea" }}
+          variant="light"
           className="mt-5"
           onClick={() => setExpanded(!isExpanded)}
           aria-controls="Collapse-collapse-text"
           aria-expanded={isExpanded}
         >
-          {isExpanded ? "Hide" : "Expand"}
+          {isExpanded ? "Back to Basics" : "See More"}
         </Button>
       </div>
       <Footer isExpanded={isExpanded} />

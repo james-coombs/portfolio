@@ -5,11 +5,9 @@ import Contact from "./Contact";
 export default function Footer(props) {
   return (
     <div id="contact" className="text-center mt-3">
-      <div>
-        <Contact />
-      </div>
+      <Contact />
       {props.isExpanded ? (
-        <p>
+        <p className="sitecore-legal">
           <a
             href="https://iconscout.com/icons/sitecore"
             rel="noopener noreferrer"

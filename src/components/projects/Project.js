@@ -48,13 +48,14 @@ export default function Project(props) {
           <p>{props.project["overviewText"]}</p>
           <hr className="portfolio-hr" />
           <p>{props.project["descriptionText"]}</p>
-          <Button className="mr-1" href={props.project["url"]}>
+          <Button variant="light" className="mr-1" href={props.project["url"]}>
             Go to site
           </Button>
-          <Button className="mr-1" href={props.project["repo"]}>
+          <Button variant="light" className="mr-1" href={props.project["repo"]}>
             GitHub Repo
           </Button>
           <Button
+            variant="light"
             onClick={(e) => toggleFrame(props.project["name"], e)}
             className="mr-1"
           >
@@ -67,10 +68,10 @@ export default function Project(props) {
             <div className="images">
               <Tabs defaultActiveKey="0" id="">
                 {props.project.screenshots.map((s, i) => (
-                  <Tab eventKey={i} title={i}>
+                  <Tab eventKey={i} title={s.name}>
                     <img
                       key={props.project["name"]}
-                      src={s}
+                      src={s.src}
                       className="img-fluid mb-1"
                       alt={props.project["name"]}
                     />

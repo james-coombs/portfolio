@@ -66,7 +66,12 @@ export default {
         "This app was my first experience with Ember.js. I spent a lot of time playing around with routes, views, and components. My development process was focused on trying to get a certain piece of information to render, or sending a specific action to the API.",
       url: "https://james-coombs.github.io/yamba-client",
       repo: "https://github.com/james-coombs/yamba-client",
-      screenshots: [yambaHome, yambaBoards, yambaBoard, yambaUsers],
+      screenshots: [
+        { name: "Home", src: yambaHome },
+        { name: "Boards", src: yambaBoards },
+        { name: "Board", src: yambaBoard },
+        { name: "Users", src: yambaUsers },
+      ],
     },
     {
       name: "Sweaters for Turtles",
@@ -77,7 +82,11 @@ export default {
         "This was my first exposure to Express.js, and I found it a very powerful and versatile tool for creating an API. It was also my first interaction with a third party API (Stripe), and MongoDB.",
       url: "https://chardeemcdennis.github.io/sweaters-for-turtles-client",
       repo: "https://github.com/chardeemcdennis/sweaters-for-turtles-client",
-      screenshots: [sftHome, sftProducts, sftCart],
+      screenshots: [
+        { name: "Home", src: sftHome },
+        { name: "Product", src: sftProducts },
+        { name: "Cart", src: sftCart },
+      ],
     },
     {
       name: "Back\\Log",
@@ -88,7 +97,7 @@ export default {
         "Back\\Log is my very first pet project! It is the first full stack app that I built, and it is what made me fall in love with Ruby on Rails. I was amazed at the flexibility that it gives you, while remaining easy to use (not to mention giving the best error messages around). ",
       url: "https://james-coombs.github.io/back-log-client",
       repo: "https://github.com/james-coombs/back-log-client",
-      screenshots: [backlog],
+      screenshots: [{ name: "App", src: backlog }],
     },
     {
       name: "Tic-Tac-Toe",
@@ -99,7 +108,7 @@ export default {
         "My first web app! Built in only a week, and with no prior development experience. It is not pretty, but it absolutely does what it advertises! The first time I was able to make a successful request to the API and render the response data was one of the biggest victories in my development career.",
       url: "https://james-coombs.github.io/tic-tac-toe",
       repo: "https://github.com/james-coombs/project-1-tic-tac-toe",
-      screenshots: [ttt],
+      screenshots: [{ name: "App", src: ttt }],
     },
     {
       name: "Biological Samples CSV API",
@@ -110,7 +119,7 @@ export default {
         "This app is used to convert CSV files to JSON. It is my first app to use Rails views (.erb templates) rather than a separate JavaScript Client.",
       url: "https://samples-csv-api.herokuapp.com/samples",
       repo: "https://github.com/james-coombs/rails-csv-api",
-      screenshots: [api],
+      screenshots: [{ name: "UI/JSON", src: api }],
     },
   ],
 
