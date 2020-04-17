@@ -40,7 +40,7 @@ export default function Project(props) {
   return (
     <div className="mb-3 project-card">
       <Row>
-        <Col sm={5}>
+        <Col lg={6} md={12}>
           <h3>{props.project["name"]}</h3>
           {props.project.technologies.map((t) => (
             <span key={t}>{t}</span>
@@ -48,22 +48,32 @@ export default function Project(props) {
           <p>{props.project["overviewText"]}</p>
           <hr className="portfolio-hr" />
           <p>{props.project["descriptionText"]}</p>
-          <Button variant="light" className="mr-1" href={props.project["url"]}>
-            Go to site
-          </Button>
-          <Button variant="light" className="mr-1" href={props.project["repo"]}>
-            GitHub Repo
-          </Button>
-          <Button
-            variant="light"
-            onClick={(e) => toggleFrame(props.project["name"], e)}
-            className="mr-1"
-          >
-            Toggle Embed
-          </Button>
+          <Row className="project-btn-row mb-2">
+            <Button
+              variant="light"
+              className=" project-btn"
+              href={props.project["url"]}
+            >
+              Go to site
+            </Button>
+            <Button
+              variant="light"
+              className=" project-btn"
+              href={props.project["repo"]}
+            >
+              GitHub Repo
+            </Button>
+            <Button
+              variant="light"
+              onClick={(e) => toggleFrame(props.project["name"], e)}
+              className=" project-btn"
+            >
+              Toggle Embed
+            </Button>
+          </Row>
         </Col>
 
-        <Col sm={7}>
+        <Col lg={6} md={12}>
           <div id={props.project["name"]}>
             <div className="images">
               <Tabs defaultActiveKey="0" id="">

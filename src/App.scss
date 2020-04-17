@@ -38,7 +38,6 @@ code {
 
 #root {
   background: $offwhite;
-  transition: all 0.25s ease;
 }
 
 #about {
@@ -74,6 +73,9 @@ code {
   .carousel {
     margin: 0 auto;
     max-width: 45vw;
+    @media only screen and (max-width: 991px) {
+      max-width: 80vw;
+    }
   }
   .carousel-caption {
     color: $black;
@@ -82,6 +84,12 @@ code {
     top: 100%;
     li {
       background-color: $black;
+    }
+  }
+
+  .carousel-title {
+    @media only screen and (max-width: 991px) {
+      font-size: 1.2rem;
     }
   }
 }
@@ -96,11 +104,14 @@ code {
 
 #about {
   .header-row {
-    margin: 0px 10vw;
+    margin: 0px auto;
   }
 
   .about-text {
     margin-top: 5%;
+    @media only screen and (max-width: 991px) {
+      text-align: center;
+    }
   }
 }
 
@@ -159,6 +170,14 @@ code {
     border: 1px solid #dee2e6;
     border-top: none;
   }
+
+  .project-btn-row {
+    margin: 0 auto;
+  }
+
+  .project-btn {
+    margin: 0px 1px;
+  }
 }
 
 iframe {
@@ -188,9 +207,10 @@ svg {
 
   color: $offwhite;
 
-  padding: 30px 0px;
+  padding-top: 25px;
+  padding-bottom: 10px;
 
-  .sitecore-legal > * {
+  .legal > * {
     color: $offwhite;
   }
 
@@ -241,5 +261,32 @@ svg {
   margin: 10px 0px;
 }
 
-.header-bar {
+.expand-btn {
+  max-width: 200px;
+  margin: 0 auto;
+
+  .rotate {
+    &.point-up {
+      svg {
+        transition: all 0.5s ease-out;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .header-bar {
+    display: none;
+  }
+  .james-coombs {
+    width: 100%;
+    display: block;
+  }
+  .web-developer {
+    width: 100%;
+    display: block;
+  }
 }

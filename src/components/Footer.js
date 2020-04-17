@@ -6,8 +6,18 @@ export default function Footer(props) {
   return (
     <div id="contact" className="text-center mt-3">
       <Contact />
+      <p className="legal">
+        Chevron Icon by{" "}
+        <a
+          href="https://fontawesome.com/license"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          FontAwesome
+        </a>
+      </p>
       {props.isExpanded ? (
-        <p className="sitecore-legal">
+        <p className="legal">
           <a
             href="https://iconscout.com/icons/sitecore"
             rel="noopener noreferrer"

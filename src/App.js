@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./App.scss";
-// import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Slides from "./components/Slides";
@@ -10,8 +9,8 @@ import Button from "react-bootstrap/Button";
 import Fade from "react-bootstrap/Fade";
 import Projects from "./components/projects/Projects";
 import Skills from "./components/Skills";
-
 import Container from "react-bootstrap/Container";
+import { ReactComponent as chevron } from "./img/svg/chevron-down-solid.svg";
 
 function App() {
   const [isExpanded, setExpanded] = useState(false);
@@ -31,7 +30,7 @@ function App() {
           <Slides />
         )}
         <Collapse
-          appear={true}
+          // appear={true}
           id="main-collapse"
           className={componentClasses.join(" ")}
           in={isExpanded}
@@ -42,17 +41,18 @@ function App() {
           </div>
         </Collapse>
       </div>
-      <div className="text-center">
-        <Button
-          style={{ border: "1px solid #e2e6ea" }}
-          variant="light"
-          className="mt-5"
+      <div className="text-center mt-5">
+        <div
+          className="expand-btn"
           onClick={() => setExpanded(!isExpanded)}
           aria-controls="Collapse-collapse-text"
           aria-expanded={isExpanded}
         >
-          {isExpanded ? "Back to Basics" : "See More"}
-        </Button>
+          {isExpanded ? "Back to basics" : "Show me more"}
+          <span className={`rotate ${isExpanded ? "point-up" : ""}`}>
+            {React.createElement(chevron)}
+          </span>
+        </div>
       </div>
       <Footer isExpanded={isExpanded} />
     </Container>

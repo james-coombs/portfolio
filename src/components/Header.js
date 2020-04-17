@@ -9,16 +9,18 @@ import Col from "react-bootstrap/Col";
 export default function Header(props) {
   return (
     <div id="about" className="header-backsplash">
-      <Row className="header-row">
-        <Col md={3} className="text-center pr-0">
+      <Row className="header-row container">
+        <Col lg={4} className="text-center px-0">
           {" "}
           <Image className="headshot mt-5 mb-2" src={headshot} roundedCircle />
         </Col>
-        <Col md={9} className="about-text pl-0">
+        <Col lg={7} className="about-text px-0">
           <div className="">
-            <span className="h2">{portfolioData.about.name}</span>
+            <span className="h2 james-coombs">{portfolioData.about.name}</span>
             <span className="h2 header-bar">{" | "}</span>
-            <span className="h3">{portfolioData.about.title}</span>
+            <span className="h3 web-developer">
+              {portfolioData.about.title}
+            </span>
           </div>
 
           <hr className="header-hr" />
