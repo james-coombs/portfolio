@@ -3,7 +3,7 @@ import "./App.scss";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Slides from "./components/caurosel/Slides";
+import Slides from "./components/Slides";
 import Footer from "./components/Footer";
 import Collapse from "react-bootstrap/Collapse";
 import Button from "react-bootstrap/Button";

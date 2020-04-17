@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import portfolioData from "../../portfolioData";
+import portfolioData from "../portfolioData";
 
 export default function Slides() {
   const [index, setIndex] = useState(0);

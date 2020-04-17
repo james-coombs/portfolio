@@ -1,7 +1,6 @@
 import portfolioData from "../portfolioData";
 import React from "react";
 import headshot from "../img/headshot.jpg";
-import background from "../img/background.jpg";
 import Image from "react-bootstrap/Image";
 import Contact from "./Contact";
 import Row from "react-bootstrap/Row";
@@ -9,17 +8,7 @@ import Col from "react-bootstrap/Col";
 
 export default function Header(props) {
   return (
-    <div
-      id="about"
-      className="header-backsplash"
-      // style={{
-      //   backgroundImage: `url(${background})`,
-      //   backgroundPosition: "center",
-      //   backgroundSize: "cover",
-      //   backgroundRepeat: "no-repeat",
-      //   minHeight: "60vh",
-      // }}
-    >
+    <div id="about" className="header-backsplash">
       <Row className="header-row">
         <Col md={3} className="text-center pr-0">
           {" "}
