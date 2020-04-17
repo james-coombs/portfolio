@@ -7,6 +7,7 @@ import { ReactComponent as emailSvg } from "./img/svg/email.svg";
 import { ReactComponent as githubSvg } from "./img/svg/github.svg";
 import { ReactComponent as linkedinSvg } from "./img/svg/linkedin.svg";
 import { ReactComponent as pdfSvg } from "./img/svg/pdf.svg";
+import { ReactComponent as documentSvg } from "./img/svg/document.svg";
 
 import backlog from "./img/screenshots/back-log.png";
 import api from "./img/screenshots/api.png";
@@ -50,8 +51,8 @@ export default {
       {
         name: "Resume",
         url:
-          "https://drive.google.com/open?id=17S8Xg_MaAn5AfOl3PTXKEo22Rx-VPjYk",
-        svg: pdfSvg,
+          "https://docs.google.com/document/d/1c-9McLl0UnPPPthGN4Z6fGlNbKK6mE4FgVus61r_TKY/edit?usp=sharing",
+        svg: documentSvg,
       },
     ],
   },
