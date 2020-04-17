@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9afc0092423b6ea985cfdbdf852a5b36",
+    "revision": "092428a7e850579914503530ed524e84",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "3f0e9dec576bb28b6637",
+    "revision": "987dacc3c6a401d414cf",
     "url": "/portfolio/static/css/main.5142e530.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.3ffb7fe6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3f0e9dec576bb28b6637",
-    "url": "/portfolio/static/js/main.52e4acaf.chunk.js"
+    "revision": "987dacc3c6a401d414cf",
+    "url": "/portfolio/static/js/main.ae7ee0cc.chunk.js"
   },
   {
     "revision": "f619aeccc94a0d089131",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2c0862a67bfb8773d52c7833e17cd5ca",
     "url": "/portfolio/static/media/chevron-down-solid.2c0862a6.svg"
+  },
+  {
+    "revision": "59c7ad614e533f5ef68d08870cbbabad",
+    "url": "/portfolio/static/media/document.59c7ad61.svg"
   },
   {
     "revision": "40415e62771bbabf4be7842dd8bf90e6",
