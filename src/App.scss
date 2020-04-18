@@ -66,6 +66,9 @@ code {
     h3 {
       .blurb {
         font-size: 1.4rem;
+        @media only screen and (max-width: 991px) {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -114,7 +117,7 @@ code {
   background: $black;
   .nav-item {
     margin: 0px 1rem;
-    padding: 5px 10px;
+    padding: 5px 0.5rem;
     border-radius: 0.25rem;
     &:hover {
       background: $copper;
@@ -171,6 +174,9 @@ code {
   .nav-tabs {
     a {
       color: black;
+      @media only screen and (max-width: 400px) {
+        padding: 0.5rem;
+      }
     }
   }
 
@@ -185,6 +191,11 @@ code {
 
   .project-btn {
     margin: 0px 1px;
+
+    @media only screen and (max-width: 400px) {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
@@ -240,7 +251,6 @@ svg {
   margin: 0 auto;
 
   a {
-    // color: $offwhite;
     max-width: 25%;
     padding: 0px 5px;
     &:hover {

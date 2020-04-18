@@ -27,7 +27,6 @@ export default {
     About: "/#about",
     Projects: "/#projects",
     Skills: "/#skills",
-    Contact: "/#contact",
   },
 
   about: {
