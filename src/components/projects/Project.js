@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,6 +9,8 @@ import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 
 export default function Project(props) {
+  const [isEmbed, setIsEmbed] = useState(false);
+
   const toggleFrame = (id, e) => {
     const iFrame = document.createElement("iframe");
 
@@ -21,6 +23,8 @@ export default function Project(props) {
     const childEl = document.getElementById(id).firstChild;
 
     if (!childEl.classList.contains("d-none")) {
+      setIsEmbed(true);
+
       childEl.classList.add("d-none");
 
       document.getElementById(`iframe-${props.project["name"]}`)
@@ -29,6 +33,7 @@ export default function Project(props) {
             .classList.remove("d-none")
         : document.getElementById(id).appendChild(iFrame);
     } else {
+      setIsEmbed(false);
       childEl.classList.remove("d-none");
 
       document
@@ -68,7 +73,7 @@ export default function Project(props) {
               onClick={(e) => toggleFrame(props.project["name"], e)}
               className=" project-btn"
             >
-              Toggle Embed
+              {isEmbed ? "Show screenshots" : "Embed App"}
             </Button>
           </Row>
         </Col>
