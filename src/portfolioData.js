@@ -62,7 +62,7 @@ export default {
     {
       name: "Yamba",
       technologies: ["Ember.js | ", "Ruby on Rails"],
-      blurb: "Image board",
+      blurb: "Yet Another Message Board App",
       overviewJsx: (
         <>
           <p>
