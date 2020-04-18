@@ -45,9 +45,9 @@ export default function Project(props) {
           {props.project.technologies.map((t) => (
             <span key={t}>{t}</span>
           ))}
-          <p>{props.project["overviewText"]}</p>
+          {props.project["overviewJsx"]}
           <hr className="portfolio-hr" />
-          <p>{props.project["descriptionText"]}</p>
+          {props.project["descriptionJsx"]}
           <Row className="project-btn-row mb-2">
             <Button
               variant="light"

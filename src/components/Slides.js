@@ -19,7 +19,9 @@ export default function Slides() {
       >
         {portfolioData.projects.map((p, i) => (
           <Carousel.Item className="text-center">
-            <h3 className="mt-2 carousel-title">{p.name}</h3>
+            <h3 className="mt-2 carousel-title">
+              {p.name} - <span className="blurb">{p.blurb}</span>
+            </h3>
             <img
               src={p.screenshots[0].src}
               className="img-fluid mb-1"

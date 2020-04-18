@@ -1,3 +1,5 @@
+import React from "react";
+
 import { ReactComponent as ReduxSvg } from "./img/svg/redux.svg";
 import { ReactComponent as EmberSvg } from "./img/svg/ember.svg";
 import { ReactComponent as SolrSvg } from "./img/svg/solr.svg";
@@ -61,10 +63,30 @@ export default {
     {
       name: "Yamba",
       technologies: ["Ember.js | ", "Ruby on Rails"],
-      overviewText:
-        "Create your own boards to host pages made by you or other users! > Post your own text and images to you boards, or boards owned by other users. A custom client build with Ember.js. > A custom API built with Ruby on Rails and PSQL. ",
-      descriptionText:
-        "This app was my first experience with Ember.js. I spent a lot of time playing around with routes, views, and components. My development process was focused on trying to get a certain piece of information to render, or sending a specific action to the API.",
+      blurb: "Image board",
+      overviewJsx: (
+        <>
+          <p>
+            Create your own boards to host pages made by you or other users!
+          </p>
+          <ul>
+            <li>
+              Post your own text and images to you boards, or boards owned by
+              other users.
+            </li>
+            <li>A custom client build with Ember.js.</li>
+            <li>A custom API built with Ruby on Rails and PostgreSQL.</li>
+          </ul>
+        </>
+      ),
+      descriptionJsx: (
+        <p>
+          This app was my first experience with Ember.js. I spent a lot of time
+          playing around with routes, views, and components. My development
+          process was focused on trying to get a certain piece of information to
+          render, or sending a specific action to the API.
+        </p>
+      ),
       url: "https://james-coombs.github.io/yamba-client",
       repo: "https://github.com/james-coombs/yamba-client",
       screenshots: [
@@ -77,10 +99,23 @@ export default {
     {
       name: "Sweaters for Turtles",
       technologies: ["Node.js | ", "MongoDB"],
-      overviewText:
-        "Shop for awesome sweaters and checkout with Stripe payment! > Developed as a team with @wmcb91, @knoddin and @nlkassad. > A custom client built with HTML/CSS, JavaScript and Handlebars. > A custom API built with Express.js and MongoDB. ",
-      descriptionText:
-        "This was my first exposure to Express.js, and I found it a very powerful and versatile tool for creating an API. It was also my first interaction with a third party API (Stripe), and MongoDB.",
+      blurb: "Ecommerce App",
+      overviewJsx: (
+        <p className="sft-text">
+          Shop for awesome sweaters and checkout with Stripe payment! Developed
+          as a team with <a href="https://github.com wmcb91">@wmcb91</a>,{" "}
+          <a href="https://github.com/knoddin">@knoddin</a> and{" "}
+          <a href="https://github.com/nlkassad">@nlkassad</a>.
+        </p>
+      ),
+
+      descriptionJsx: (
+        <p>
+          This was my first exposure to Express.js, and I found it a very
+          powerful and versatile tool for creating an API. It was also my first
+          interaction with a third party API (Stripe), and MongoDB.
+        </p>
+      ),
       url: "https://chardeemcdennis.github.io/sweaters-for-turtles-client",
       repo: "https://github.com/chardeemcdennis/sweaters-for-turtles-client",
       screenshots: [
@@ -92,10 +127,27 @@ export default {
     {
       name: "Back\\Log",
       technologies: ["Ruby on Rails | ", "PostgreSQL | ", "Handlebars"],
-      overviewText:
-        "Back\\Log is a way to keep record of your progress in games! > A custom client built with HTML/CSS, JavaScript and Handlebars. > A custom API built with Ruby on Rails and PSQL. ",
-      descriptionText:
-        "Back\\Log is my very first pet project! It is the first full stack app that I built, and it is what made me fall in love with Ruby on Rails. I was amazed at the flexibility that it gives you, while remaining easy to use (not to mention giving the best error messages around). ",
+      blurb: "Full-Stack CRUD App",
+      overviewJsx: (
+        <>
+          <p>Back\\Log is a way to keep record of your progress in games!</p>
+          <ul>
+            <li>
+              A custom client built with HTML/CSS, JavaScript and Handlebars.
+            </li>
+            <li>A custom API built with Ruby on Rails and PostgreSQL.</li>
+          </ul>
+        </>
+      ),
+
+      descriptionJsx: (
+        <p>
+          Back\\Log is my very first pet project! It is the first full stack app
+          that I built, and it is what made me fall in love with Ruby on Rails.
+          I was amazed at the flexibility that it gives you, while remaining
+          easy to use (not to mention giving the best error messages around).{" "}
+        </p>
+      ),
       url: "https://james-coombs.github.io/back-log-client",
       repo: "https://github.com/james-coombs/back-log-client",
       screenshots: [{ name: "App", src: backlog }],
@@ -103,10 +155,30 @@ export default {
     {
       name: "Tic-Tac-Toe",
       technologies: ["JQuery | ", "AJAX"],
-      overviewText:
-        "Play a game of Tic-Tac-Toe, save your progress, and view your game statistics! A custom front end game client built in JavaScript, with JQuery and Ajax.",
-      descriptionText:
-        "My first web app! Built in only a week, and with no prior development experience. It is not pretty, but it absolutely does what it advertises! The first time I was able to make a successful request to the API and render the response data was one of the biggest victories in my development career.",
+      blurb: "The original App",
+      overviewJsx: (
+        <>
+          <p>
+            Play a game of Tic-Tac-Toe, save your progress, and view your game
+            statistics!
+          </p>
+          <ul>
+            <li>
+              A custom front end game client built in JavaScript, with
+              Bootstrap, JQuery and Ajax.
+            </li>
+          </ul>
+        </>
+      ),
+      descriptionJsx: (
+        <p>
+          My first web app! Built in only a week, and with no prior development
+          experience. It is not pretty, but it absolutely does what it
+          advertises! The first time I was able to make a successful request to
+          the API and render the response data was one of the biggest victories
+          in my development career.
+        </p>
+      ),
       url: "https://james-coombs.github.io/tic-tac-toe",
       repo: "https://github.com/james-coombs/project-1-tic-tac-toe",
       screenshots: [{ name: "App", src: ttt }],
@@ -114,10 +186,21 @@ export default {
     {
       name: "Biological Samples CSV API",
       technologies: ["Ruby on Rails"],
-      overviewText:
-        "A test API for importing and rendering data from CSV files. An API built with Ruby on Rails. Allows users to import proprietary sample CSV files and returns the data in JSON format.",
-      descriptionText:
-        "This app is used to convert CSV files to JSON. It is my first app to use Rails views (.erb templates) rather than a separate JavaScript Client.",
+      blurb: "Ruby on Rails API",
+      overviewJsx: (
+        <p>
+          A test API for importing and rendering data from CSV files. An API
+          built with Ruby on Rails. Allows users to import proprietary sample
+          CSV files and returns the data in JSON format.
+        </p>
+      ),
+      descriptionJsx: (
+        <p>
+          This app is used to convert CSV files to JSON. It is my first app to
+          use Rails views (.erb templates) rather than a separate JavaScript
+          Client.
+        </p>
+      ),
       url: "https://samples-csv-api.herokuapp.com/samples",
       repo: "https://github.com/james-coombs/rails-csv-api",
       screenshots: [{ name: "UI/JSON", src: api }],
