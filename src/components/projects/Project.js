@@ -81,19 +81,20 @@ export default function Project(props) {
         <Col lg={6} md={12}>
           <div id={props.project["name"]}>
             <div className="images">
-              <Tabs defaultActiveKey="0" id="">
-                {props.project.screenshots.map((s, i) => (
-                  <Tab eventKey={i} title={s.name}>
-                    <img
-                      key={props.project["name"]}
-                      src={s.src}
-                      className="img-fluid mb-1"
-                      alt={props.project["name"]}
-                    />
-                    {/* <div id={props.project["name"]}></div>{" "} */}
-                  </Tab>
-                ))}
-              </Tabs>
+              {props.project.screenshots.length ? (
+                <Tabs defaultActiveKey="0" id="">
+                  {props.project.screenshots.map((s, i) => (
+                    <Tab eventKey={i} title={s.name}>
+                      <img
+                        key={props.project["name"]}
+                        src={s.src}
+                        className="img-fluid mb-1"
+                        alt={props.project["name"]}
+                      />
+                    </Tab>
+                  ))}
+                </Tabs>
+              ) : null}
             </div>
           </div>
         </Col>

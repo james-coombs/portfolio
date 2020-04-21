@@ -22,11 +22,13 @@ export default function Slides() {
             <h3 className="mt-2 carousel-title">
               {p.name} - <span className="blurb">{p.blurb}</span>
             </h3>
-            <img
-              src={p.screenshots[0].src}
-              className="img-fluid mb-1"
-              alt={p.name}
-            />
+            {p.screenshots.length ? (
+              <img
+                src={p.screenshots[0].src}
+                className="img-fluid mb-1"
+                alt={p.name}
+              />
+            ) : null}
           </Carousel.Item>
         ))}
       </Carousel>

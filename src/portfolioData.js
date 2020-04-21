@@ -204,6 +204,32 @@ export default {
       repo: "https://github.com/james-coombs/rails-csv-api",
       screenshots: [{ name: "UI/JSON", src: api }],
     },
+    {
+      name: "Miscellaneous",
+      technologies: ["JavaScript | ", "Chrome Extensions | ", "Express.js"],
+      blurb: "Small side projects",
+      overviewJsx: (
+        <p>
+          <ul>
+            <li>
+              URl Drummer: A Chrome extension that plays a unique drum pattern
+              based on the curretn URL.
+            </li>
+            <li>
+              Last Link: A Chrome Extension to add extra highlighting to links
+              already visited.
+            </li>
+            <li>
+              Code Xpress: A (very) simple in-browser IDE built with Express.js
+            </li>
+          </ul>
+        </p>
+      ),
+      descriptionJsx: null,
+      url: null,
+      repo: null,
+      screenshots: [],
+    },
   ],
 
   skills: [

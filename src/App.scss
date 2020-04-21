@@ -284,6 +284,7 @@ svg {
   margin: 0 auto;
 
   .rotate {
+    display: block;
     &.point-up {
       svg {
         transition: all 0.5s ease-out;
