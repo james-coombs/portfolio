@@ -18,7 +18,7 @@ export default function Slides() {
         controls={false}
       >
         {portfolioData.projects.map((p, i) => (
-          <Carousel.Item className="text-center">
+          <Carousel.Item key={p.name} className="text-center">
             <h3 className="mt-2 carousel-title">
               {p.name} - <span className="blurb">{p.blurb}</span>
             </h3>

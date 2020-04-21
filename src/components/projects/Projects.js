@@ -8,7 +8,11 @@ export default function Projects(props) {
       <h3 className="text-center my-2">Projects</h3>
 
       {Object.keys(portfolioData.projects).map((key, i) => (
-        <Project key={i} project={portfolioData.projects[key]} />
+        <Project
+          key={i}
+          github={portfolioData.about.contact.find((e) => e.name === "Github")}
+          project={portfolioData.projects[key]}
+        />
       ))}
     </div>
   );

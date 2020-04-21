@@ -8,6 +8,7 @@ export default function Contact(props) {
       {portfolioData.about.contact.map((el, i) =>
         el.name !== "Email" ? (
           <a
+            key={el.name}
             className="contact-type col-3 text-center contact-link"
             target="_blank"
             rel="noopener noreferrer"
@@ -18,6 +19,7 @@ export default function Contact(props) {
           </a>
         ) : (
           <a
+            key={el.name}
             className="contact-type col-3 text-center contact-link"
             href={`mailto:${el.url}`}
           >

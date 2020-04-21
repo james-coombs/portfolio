@@ -21,6 +21,7 @@ import yambaBoard from "./img/screenshots/yamba-board.png";
 import yambaBoards from "./img/screenshots/yamba-boards.png";
 import yambaHome from "./img/screenshots/yamba-home.png";
 import yambaUsers from "./img/screenshots/yamba-users.png";
+import codeXpress from "./img/screenshots/code-xpress.png";
 
 export default {
   navItems: {
@@ -129,7 +130,7 @@ export default {
       blurb: "Full-Stack CRUD App",
       overviewJsx: (
         <>
-          <p>Back\\Log is a way to keep record of your progress in games!</p>
+          <p>Back\Log is a way to keep record of your progress in games!</p>
           <ul>
             <li>
               A custom client built with HTML/CSS, JavaScript and Handlebars.
@@ -209,7 +210,7 @@ export default {
       technologies: ["JavaScript | ", "Chrome Extensions | ", "Express.js"],
       blurb: "Small side projects",
       overviewJsx: (
-        <p>
+        <>
           <ul>
             <li>
               URl Drummer: A Chrome extension that plays a unique drum pattern
@@ -220,15 +221,16 @@ export default {
               already visited.
             </li>
             <li>
-              Code Xpress: A (very) simple in-browser IDE built with Express.js
+              Code Xpress: A simple in-browser IDE built with CodeMirror and
+              Express.js.
             </li>
           </ul>
-        </p>
+        </>
       ),
       descriptionJsx: null,
       url: null,
       repo: null,
-      screenshots: [],
+      screenshots: [{ name: "Code Xpress", src: codeXpress }],
     },
   ],
 

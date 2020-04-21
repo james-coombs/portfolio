@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Overlay from "react-bootstrap/Overlay";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 
@@ -51,30 +48,51 @@ export default function Project(props) {
             <span key={t}>{t}</span>
           ))}
           {props.project["overviewJsx"]}
-          <hr className="portfolio-hr" />
-          {props.project["descriptionJsx"]}
+          {props.project["descriptionJsx"] ? (
+            <>
+              <hr className="portfolio-hr" />
+              {props.project["descriptionJsx"]}
+            </>
+          ) : null}
+
           <Row className="project-btn-row mb-2">
-            <Button
-              variant="light"
-              className=" project-btn"
-              href={props.project["url"]}
-            >
-              Go to site
-            </Button>
-            <Button
-              variant="light"
-              className=" project-btn"
-              href={props.project["repo"]}
-            >
-              GitHub Repo
-            </Button>
-            <Button
-              variant="light"
-              onClick={(e) => toggleFrame(props.project["name"], e)}
-              className=" project-btn"
-            >
-              {isEmbed ? "Show screenshots" : "Embed App"}
-            </Button>
+            {props.project["url"] ? (
+              <Button
+                variant="light"
+                className=" project-btn"
+                href={props.project["url"]}
+              >
+                Go to site
+              </Button>
+            ) : null}
+
+            {props.project["repo"] ? (
+              <Button
+                variant="light"
+                className=" project-btn"
+                href={props.project["repo"]}
+              >
+                GitHub Repo
+              </Button>
+            ) : (
+              <Button
+                variant="light"
+                className=" project-btn"
+                href={props.github["url"] + "?tab=repositories"}
+              >
+                Find them on GitHub
+              </Button>
+            )}
+
+            {props.project["url"] ? (
+              <Button
+                variant="light"
+                onClick={(e) => toggleFrame(props.project["name"], e)}
+                className=" project-btn"
+              >
+                {isEmbed ? "Show screenshots" : "Embed App"}
+              </Button>
+            ) : null}
           </Row>
         </Col>
 
@@ -84,7 +102,7 @@ export default function Project(props) {
               {props.project.screenshots.length ? (
                 <Tabs defaultActiveKey="0" id="">
                   {props.project.screenshots.map((s, i) => (
-                    <Tab eventKey={i} title={s.name}>
+                    <Tab key={s.name} eventKey={i} title={s.name}>
                       <img
                         key={props.project["name"]}
                         src={s.src}
